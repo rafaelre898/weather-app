@@ -29,7 +29,7 @@ Follow these steps to set up and run the project locally.
    REACT_APP_WEATHER_API_URL=https://api.openweathermap.org/data/2.5/
    WEATHER_API_KEY=your_openweathermap_api_key
 
-   [You need to singUp for on OpenWeatherMap to obtain the key]
+   [You need to singUp for OpenWeatherMap to obtain the key]
 
 
 5. **Start Backend**:
