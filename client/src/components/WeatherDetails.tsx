@@ -11,11 +11,11 @@ const WeatherDetails: React.FC<WeatherDetailsProps> = ({
   visibility,
 }) => {
   return (
-    <div className="bg-gray-50 rounded-lg p-6 mt-4">
+    <div className="bg-white rounded-lg p-6 mt-4 shadow-sm">
       <h2 className="text-lg font-semibold mb-4 text-gray-700 text-center">
         Detailed Weather Information
       </h2>
-      <div className="flex flex-col items-center justify-center md:flex-row lg:flex-wrap  lg:justify-around md:items-start text-gray-600 lg:gap-x-3">
+      <div className="flex flex-col items-center justify-center md:flex-row lg:flex-wrap  lg:justify-around md:items-start text-gray-600 lg:gap-x-5">
         {[
           { label: "Sunrise", value: sunrise },
           { label: "Sunset", value: sunset },
@@ -27,10 +27,10 @@ const WeatherDetails: React.FC<WeatherDetailsProps> = ({
         ].map((detail, index) => (
           <div
             key={index}
-            className="w-full flex-1 flex flex-col items-center md:items-start justify-center lg:w-1/6 mb-4"
+            className="w-full flex-1 flex flex-col items-center md:items-start justify-center mb-4 min-w-max"
           >
-            <span className="font-medium text-sm">{detail.label}</span>
-            <span className="text-md">{detail.value}</span>
+            <span className="w-full text-center text-md mb-1">{detail.label}</span>
+            <span className="w-full text-center text-xs">{detail.value}</span>
           </div>
         ))}
       </div>

@@ -31,24 +31,24 @@ const Weather: React.FC = () => {
       </button>
 
       {loading && <p className="text-gray-500 mt-4">Loading...</p>}
-      {error && <p className="text-red-500 mt-4">Error: {error.message}</p>}
+      {error && <p className="text-yellow-500 mt-4">Unable to find...</p>}
       {data && data.getWeather && (
         <div className="rounded-lg p-6 mt-6 w-full">
           <h3 className="text-xl font-semibold text-center text-gray-700 mb-4">
             Weather in {city}
           </h3>
           <div className="flex items-center justify-center mb-4">
-            <span className="text-4xl font-semibold">
+            <span className="text-5xl font-semibold">
               {data.getWeather.temperature}°C
             </span>
             <img
               src={`http://openweathermap.org/img/wn/${data.getWeather.icon}.png`}
               alt="Weather icon"
-              className="ml-3 w-12 h-12"
+              className="ml-3 w-24 h-24"
             />
           </div>
-          <p className="text-center text-gray-600 mb-4">
-            {data.getWeather.description}
+          <p className="text-center text-blue-400 mb-4">
+            {data.getWeather.description.toUpperCase()}
           </p>
           <div className="w-full">
             <WeatherDetails
