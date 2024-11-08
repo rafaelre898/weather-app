@@ -15,12 +15,12 @@ Follow these steps to set up and run the project locally.
    
 2. **Install FrontEnd dependencies**:
    ```bash
-   cd frontend
+   cd client
    npm install
 
 3. **Install BackEnd dependencies**:
    ```bash
-   cd ../backend
+   cd ../server
    npm install
 
 
@@ -29,17 +29,17 @@ Follow these steps to set up and run the project locally.
    REACT_APP_WEATHER_API_URL=https://api.openweathermap.org/data/2.5/
    WEATHER_API_KEY=your_openweathermap_api_key
 
-   [You need to singUp for OpenWeatherMap to obtain the key]
+   [You need to singUp for OpenWeatherMap to obtain the WEATHER_API_KEY key]
 
 
 5. **Start Backend**:
    ```bash
-    cd backend
-    npm start
-    Will run on: http://localhost:4000
+    cd server
+    npm run dev
+    Will run on: http://localhost:4000 and graphql dashboard on http://localhost:5000/graphql
 
 6. **Start FrontEnd**:
    ```bash
-   cd frontend
-   npm start
+   cd client
+   npm run dev
    Will run on: http://localhost:3000
